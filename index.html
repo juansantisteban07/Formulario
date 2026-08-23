@@ -10,7 +10,7 @@
 
     <div class="form-container">
         <h2>Formulario de Registro</h2>
-        <form action="#" method="post">
+        <form id="FormularioRegistro" action="#">
             
             <!-- Nombres -->
             <div class="form-group">
@@ -24,39 +24,45 @@
                 <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" required>
             </div>
 
-            <!-- Tipo de identificación (Códigos DIAN) -->
+            <!-- Tipo de identificación -->
             <div class="form-group">
                 <label for="tipo-id">Tipo de documento:</label>
                 <select id="tipo-id" name="tipo-id" required>
                     <option value="" disabled selected>Seleccione una opción</option>
-                    <option value="13">Cédula de ciudadanía</option>
-                    <option value="12">Tarjeta de identidad</option>   
-                    <option value="41">Pasaporte</option>
-                    <option value="22">Cédula de extranjería</option>
+                    <option value="Cédula de ciudadanía">Cédula de ciudadanía</option>
+                    <option value="Tarjeta de identidad">Tarjeta de identidad</option>   
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Cédula de extranjería">Cédula de extranjería</option>
                 </select>
             </div>
 
-            <!-- País de domicilio (Mínimo 3 opciones + Placeholder disabled / Colombia no disabled/selected) -->
+            <!-- Número de documento (NUEVO CAMPO) -->
+            <div class="form-group">
+                <label for="numero-doc">Número de documento:</label>
+                <input type="text" id="numero-doc" name="numero-doc" placeholder="Ingresa tu número de documento" required>
+            </div>
+
+            <!-- País de domicilio -->
             <div class="form-group">
                 <label for="pais">País de domicilio:</label>
                 <select id="pais" name="pais" required>
                     <option value="" disabled selected>Seleccione un país</option>
-                    <option value="169">Colombia</option>
-                    <option value="840">Estados Unidos</option>
-                    <option value="724">España</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="España">España</option>
                 </select>
             </div>
 
-            <!-- Ciudad de domicilio (Mínimo 5 ciudades del país / Códigos DIAN) -->
+            <!-- Ciudad de domicilio -->
             <div class="form-group">
                 <label for="ciudad">Ciudad de domicilio:</label>
                 <select id="ciudad" name="ciudad" required>
                     <option value="" disabled selected>Seleccione una ciudad</option>
-                    <option value="11001">Bogotá, D.C.</option>
-                    <option value="05001">Medellín</option>
-                    <option value="76001">Cali</option>
-                    <option value="08001">Barranquilla</option>
-                    <option value="13001">Cartagena</option>
+                    <option value="Bogotá, D.C.">Bogotá, D.C.</option>
+                    <option value="Medellín">Medellín</option>
+                    <option value="Cali">Cali</option>
+                    <option value="Barranquilla">Barranquilla</option>
+                    <option value="Cartagena">Cartagena</option>
                 </select>
             </div>
 
@@ -87,5 +93,6 @@
         </form>
     </div>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
