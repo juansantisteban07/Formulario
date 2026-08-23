@@ -10,7 +10,7 @@
 
     <div class="form-container">
         <h2>Formulario de Registro</h2>
-        <form action="#" method="post">
+        <form id="FormularioRegistro" action="#" method="POST">
             
             <!-- Nombres -->
             <div class="form-group">
@@ -36,7 +36,7 @@
                 </select>
             </div>
 
-            <!-- País de domicilio (Mínimo 3 opciones + Placeholder disabled / Colombia no disabled/selected) -->
+            <!-- País de domicilio (Códigos DIAN / Excepción Colombia) -->
             <div class="form-group">
                 <label for="pais">País de domicilio:</label>
                 <select id="pais" name="pais" required>
@@ -47,7 +47,7 @@
                 </select>
             </div>
 
-            <!-- Ciudad de domicilio (Mínimo 5 ciudades del país / Códigos DIAN) -->
+            <!-- Ciudad de domicilio (Mínimo 5 ciudades / Códigos DIAN) -->
             <div class="form-group">
                 <label for="ciudad">Ciudad de domicilio:</label>
                 <select id="ciudad" name="ciudad" required>
