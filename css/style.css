@@ -124,3 +124,84 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: scale(0.99);
 }
+
+
+/* ============================================================
+   TALLER: FUNCIONES Y MANIPULACIÓN DEL DOM
+   ============================================================ */
+
+.taller-container {
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 2px dashed #cbd5e1;
+}
+
+.taller-container h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.reto {
+    background-color: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reto:hover {
+    border-color: #93c5fd;
+}
+
+.reto h3 {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.reto input[type="text"] {
+    margin-bottom: 10px;
+}
+
+.reto button {
+    padding: 9px 18px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.reto button:hover {
+    background-color: #2563eb;
+}
+
+.reto button:active {
+    transform: scale(0.97);
+}
+
+.reto pre {
+    margin-top: 12px;
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    min-height: 20px;
+}
+
+.reto pre:empty::before {
+    content: "El resultado aparecerá aquí...";
+    color: #64748b;
+    font-style: italic;
+}
