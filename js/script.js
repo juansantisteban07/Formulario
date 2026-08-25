@@ -168,7 +168,8 @@ document.getElementById('btn-reto4').addEventListener('click', function() {
 document.getElementById('btn-reto5').addEventListener('click', function() {
   const resultado = crearSymbolYBigInt();
   // JSON.stringify no soporta BigInt directamente (lanza error),
-  // por eso convertimos el bigint a string antes de mostrarlo.
+  // por eso converti el bigint a string antes de mostrarlo.
+  //tipo de dato primitivo utilizado en programación para representar y manipular números enteros muy grandes que superan el límite seguro del tipo numérico tradicional
   document.getElementById('resultado-reto5').textContent = JSON.stringify(
     resultado,
     (key, value) => typeof value === "bigint" ? value.toString() + "n" : value,
