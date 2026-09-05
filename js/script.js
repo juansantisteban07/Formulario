@@ -189,6 +189,52 @@ document.getElementById('btn-reto7').addEventListener('click', function() {
   document.getElementById('resultado-reto7').textContent = JSON.stringify(resultado, null, 2);
 });
 
-
-
 });
+
+
+const formularioPokemon = document.getElementById('formPokedex');
+
+formularioPokemon.addEventListener('submit', async function(event){
+
+  event.preventDefault();
+
+  const nombrePokemon = document.getElementById('pokemonInput').value.trim().toLowerCase();
+
+  if (!nombrePokemon) return;
+
+try {
+  const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`);
+
+  if(!respuesta.ok) {
+    throw new Error('¡No encontre nada chamo!');
+  }
+
+  const datos = await respuesta.json();
+
+  cositasPokemon(datos);
+
+    } catch(error) {
+      const contenedor = document.getElementById('resultadoPokemon')
+      contenedor.innerHTML = 
+    `<div>
+      <p>${error.message}</p>
+    </div>`;
+    }
+});
+
+function cositasPokemon(argumentos) {
+
+  const contenedor = document.getElementById('resultadoPokemon')
+
+  const nombre = argumentos.name.toUpperCase();
+  const imagen = argumentos.sprites.front_default;
+
+  contenedor.innerHTML = 
+    `<div>
+      <h2>${nombre}</h2>
+      <img src="${imagen}" style="with: 200px; heigth: 200px">
+    </div>`;
+  //recibir los datos y extraer lo que necesito
+  //asignar imagen y nombre en los objetos doom
+  // mostrar los objetos doom 
+}
